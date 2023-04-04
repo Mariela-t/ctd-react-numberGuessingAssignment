@@ -7,14 +7,13 @@ import GameOver from "./GameOver";
  *
  * Returns a random integer number from 1-100 inclusive
  */
-function getRandomNumber() {
-  return Math.floor(Math.random() * 100) + 1;
-}
 
+const getRandomNumber = Math.floor(Math.random() * 100) + 1;
+console.log(getRandomNumber);
 const MAX_ATTEMPTS = 5;
 
 const NumberGuessingGame = () => {
-  const [numberToGuess, setNumberToGuess] = useState(getRandomNumber());
+  const [numberToGuess, setNumberToGuess] = useState(getRandomNumber);
   const [numberOfGuesses, setnumberOfGuesses] = useState(0);
   const [latestGuess, setlatestGuess] = useState(null);
 
